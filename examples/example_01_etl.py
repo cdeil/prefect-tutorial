@@ -37,9 +37,9 @@ with Flow("My ETL") as my_etl:
 # my_etl.visualize()
 
 print("Execute flow")
-# state = my_etl.run()
-my_etl.register(project_name="spam")
+state = my_etl.run()
+# my_etl.register(project_name="spam")
 
 
 print("All done. State and results:")
-# print(f"{state.result[y].result=}")
+print(f"{state.result[y].result=}")
