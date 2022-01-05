@@ -85,17 +85,14 @@ modern data stack. The easiest way to build, run, and monitor data pipelines at 
 
 The Prefect core API is documented here: https://docs.prefect.io/core/
 
+Let's learn by running a few [examples](examples).
+
 Most important parts of the API that we'll learn: `prefect.Flow`, `prefect.task` decorator, `prefect.Task`,
 `prefect.Parameter`, `prefect.schedules.IntervalSchedule`.
 
 Some more rarely used parts of the API (in our codebase) that we'll also look at: `Task.map`, `prefect.case`,
 `prefect.unmapped`, `prefect.tasks.control_flow.conditional.ifelse`, `prefect.tasks.core.operators.GetItem`,
 `prefect.tasks.control_flow.merge`, `prefect.context`.
-
-Let's learn by running a few [examples](examples).
-
-* TBD: Dask example?
-* TBD: Jupyter and IPython usage examples
 
 ## Prefect from scratch
 
@@ -131,8 +128,23 @@ overview](https://docs.prefect.io/orchestration/#architecture-overview)
 We won't go in depth on this part of Prefect because (a) we don't use it yet and (b) it will significantly
 change soon with Prefect Orion (see below) where the server and UI are packaged with the Python API.
 
-But let's try out a simple example at https://cloud.prefect.io/ (see https://cloud.prefect.io/tutorial) to see what it's
-about.
+But let's try out a simple example at https://cloud.prefect.io/ to see what it's about.
+This is basically following https://cloud.prefect.io/tutorial.
+
+* Go to https://cloud.prefect.io/ and make an API key
+* Change `example_01_etl.py` to call `flow.register(project_name="spam")` instead of `flow.run()`
+
+```
+prefect auth login --key <token>
+prefect create project spam
+python examples/example_01_etl.py
+prefect agent local start
+```
+* Go to https://cloud.prefect.io/ again and "Quick Run" the flow
+
+The idea is that the Prefect server and UI provide an orchestration and scheduling and monitoring solution.
+E.g. data engineers could use that, but also it could be built for business people who then can run pre-defined
+workflows, with some customisation e.g. changing parameters or schedules.
 
 ## Prefect Orion
 
