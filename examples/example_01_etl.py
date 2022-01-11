@@ -29,7 +29,7 @@ def load(result):
 
 print("Creating flow DAG")
 with Flow("My ETL") as my_etl:
-    p = Parameter("p", default=2)
+    p = Parameter("p", default=1)
     x = extract()
     y = transform(x, p)
     load(y)
@@ -37,7 +37,7 @@ with Flow("My ETL") as my_etl:
 # my_etl.visualize()
 
 print("Execute flow")
-state = my_etl.run()
+state = my_etl.run(parameters={"p": 2})
 # my_etl.register(project_name="spam")
 
 

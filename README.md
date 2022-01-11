@@ -59,7 +59,7 @@ cd prefect
 * Prefect is a Python workflow orchestration system. That's very vague. This tutorial should give you a better understanding of what Prefect actually does.
 * Tag-line from https://www.prefect.io/: "Orchestrate the
 modern data stack. The easiest way to build, run, and monitor data pipelines at scale."
-* [Prefect](https://en.wikipedia.org/wiki/Prefect) is a title similar to manager. There's also [Ford Prefect](https://en.wikipedia.org/wiki/Ford_Prefect_(character)) from hitchhikers guide to the Galaxy, which seems to be a favourite book of the Prefect team, e.g. they have written a Prefect workflow called Marvin that runs their standups, named after Marvin the Paranoid Android (see [blog post](https://medium.com/the-prefect-blog/prefect-runs-on-prefect-3e6df553c3a4)).
+* [Prefect](https://en.wikipedia.org/wiki/Prefect) is a title similar to manager. There's also [Ford Prefect](https://en.wikipedia.org/wiki/Ford_Prefect_(character)) from hitchhikers guide to the Galaxy, which seems to be a favourite book of the Prefect team. For example Marvin the Paranoid Android appears (see [blog post](https://medium.com/the-prefect-blog/prefect-runs-on-prefect-3e6df553c3a4)).
 * Prefect core - open source Python package, `prefect` cli, UI, server
   * [prefect](https://github.com/PrefectHQ/prefect) - Python package. Currently version 0.15, release 1.0 coming soon
   * [server](https://github.com/PrefectHQ/server) - Prefect API and backend
@@ -148,7 +148,7 @@ workflows, with some customisation e.g. changing parameters or schedules.
 
 ## Prefect Orion
 
-Prefect Orion is the name for the new Prefect 2.0 that is in tech preview now, with planned release in early 2022.
+Prefect Orion (see [Why "Orion"?](https://orion-docs.prefect.io/faq/#why-orion)) is the name for the new Prefect 2.0 that is in tech preview now, with planned release in early 2022.
 
 If you'd like to learn more, read the [intro blog post](https://www.prefect.io/blog/announcing-prefect-orion/)
 and check out the [website](https://www.prefect.io/orion/) and [docs](https://orion-docs.prefect.io/).
